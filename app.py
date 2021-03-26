@@ -56,7 +56,7 @@ def predict():
         prediction=model.predict([[funded_amnt_inv, int_rate, emp_length, annual_inc,pymnt_plan, dti, delinq_2yrs, fico_range_low, inq_last_6mths,open_acc, pub_rec, revol_bal, revol_util, total_acc,initial_list_status, total_rec_late_fee, last_pymnt_amnt,last_fico_range_high, last_fico_range_low,collections_12_mths_ex_med, policy_code, application_type,acc_now_delinq, tot_coll_amt, tot_cur_bal, total_bal_il,max_bal_bc, TARGET, issue_d_month, earliest_cr_line_month,earliest_cr_line_year, last_pymnt_d_month,last_credit_pull_d_month, last_credit_pull_d_year]])
         output=round(prediction[0],2)
         
-        return render_template('index.html',prediction_text="Outlet Sale is {}".format(output))
+        return render_template('index.html',prediction_text="loan prediction is {}".format(output))
     return render_template('index.html')
 
 if __name__=="__main__":
